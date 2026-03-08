@@ -129,7 +129,7 @@ The system allows administrators to manage employees and leave requests, while e
 
 ```bash
 
-git clone <repository-url>
+git clone <https://github.com/aparnamukherjee0412/Employee-Leave-Management-System>
 
 cd EmpLeaveManagementSystem
 
@@ -157,7 +157,7 @@ Update the connection string:
 
 "ConnectionStrings": {
 
-&nbsp; "sqlconnection": "Server=YOUR\_SERVER\_NAME;Database=EmpLeaveManagementSystem;Trusted\_Connection=True;TrustServerCertificate=True;"
+ "sqlconnection": "Server=YOUR\_SERVER\_NAME;Database=EmpLeaveManagementSystem;Trusted\_Connection=True;TrustServerCertificate=True;"
 
 }
 
@@ -403,53 +403,53 @@ Notifications appear on the employee dashboard.
 
 Controllers
 
-&nbsp;   AdminController
+   AdminController
 
-&nbsp;   EmployeeController
+   EmployeeController
 
-&nbsp;   LoginController
+   LoginController
 
 
 
 Services
 
-&nbsp;   Employees
+   Employees
 
-&nbsp;   LeaveRequests
+   LeaveRequests
 
-&nbsp;   Reports
+   Reports
 
-&nbsp;   Users
+   Users
 
 
 
 Repository
 
-&nbsp;   Interfaces
+   Interfaces
 
 
 
 Infrastructure
 
-&nbsp;   DbModels
+   DbModels
 
-&nbsp;   DbContext
+   DbContext
 
 
 
 Views
 
-&nbsp;   Admin
+   Admin
 
-&nbsp;   Employee
+   Employee
 
-&nbsp;   Login
+   Login
 
 
 
 NotificationHub
 
-&nbsp;   SignalR Hub
+   SignalR Hub
 
 ```
 
@@ -490,6 +490,7 @@ Developed as a \*\*sample Employee Leave Management System project\*\* using ASP
 
 
 ---
+
 
 
 
