@@ -1,4 +1,4 @@
-# Scaffold Statement-
+\# Scaffold Statement-
 
 Scaffold-DbContext "server=DESKTOP-DMPU9K3; database=EmpLeaveManagementSystem; integrated security=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir D:\\Proj\\Infrastracture\\DbModels -Force
 
@@ -483,6 +483,7 @@ Developed as a \*\*sample Employee Leave Management System project\*\* using ASP
 
 
 ---
+
 
 
 
