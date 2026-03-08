@@ -1,0 +1,47 @@
+﻿@model Domain.EmployeeDashboardViewModel
+
+<h2>Employee Dashboard</h2>
+
+<div>
+    <h4>Total Leaves: @Model.TotalLeaves</h4>
+    <h4>Pending Leaves: @Model.PendingLeaves</h4>
+    <h4>Approved Leaves: @Model.ApprovedLeaves</h4>
+    <h4>Rejected Leaves: @Model.RejectedLeaves</h4>
+</div>
+
+<br>
+
+<a asp-action="ApplyLeave" class="btn btn-primary">Apply Leave</a>
+<a asp-action="MyLeaves" class="btn btn-info">My Leaves</a>
+
+<br>
+<br>
+
+<a asp-controller="Login" asp-action="Logout" class="btn btn-danger">Logout</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/notificationHub")
+        .build();
+
+    connection.start().catch(err => console.error(err));
+
+        connection.on("ReceiveNotification", function (message) {
+
+        const div = document.createElement("div");
+        div.innerText = message;
+        div.style.position = "fixed";
+        div.style.bottom = "20px";
+        div.style.right = "20px";
+        div.style.background = "#28a745";
+        div.style.color = "white";
+        div.style.padding = "10px";
+        div.style.borderRadius = "5px";
+
+        document.body.appendChild(div);
+
+        setTimeout(() => div.remove(), 5000);
+    });
+</script>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Domain.EmployeeViewModel>
+
+<h2>Employees</h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Search employee..." />
+    <button type="submit">Search</button>
+</form>
+
+<br>
+<a asp-controller="Admin" asp-action="Dashboard" class="btn btn-secondary">
+    Back to Dashboard
+</a>
+<br>
+<br>
+<a asp-action="AddEmployee">Add Employee</a>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Designation</th>
+        <th>Joining Date</th>
+        <th>Active Status</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Department</td>
+            <td>@item.Designation</td>
+            <td>@item.JoinDate</td>
+            <td>@(item.IsActive ? "Yes" : "No")</td>
+            <td>
+                <a asp-action="EditEmployee" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="DeactivateEmployee" asp-route-id="@item.Id">Deactivate</a>
+            </td>
+        </tr>
+    }
+</table>

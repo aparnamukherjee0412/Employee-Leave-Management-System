@@ -1,0 +1,41 @@
+﻿@model Domain.LeaveRequestViewModel
+
+<h2>Apply Leave</h2>
+
+<form asp-action="ApplyLeave" method="post">
+
+    <div>
+        <label>From Date</label>
+        <input asp-for="FromDate" type="date" />
+        <span asp-validation-for="FromDate" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>To Date</label>
+        <input asp-for="ToDate" type="date" />
+        <span asp-validation-for="ToDate" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Reason</label>
+        <textarea asp-for="Reason"></textarea>
+        <span asp-validation-for="Reason" style="color:red"></span>
+    </div>
+
+    <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <a asp-action="Dashboard" class="btn btn-secondary">
+        Back to Dashboard
+    </a>
+
+</form>
+
+<div style="color:red">
+    @Html.ValidationSummary()
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

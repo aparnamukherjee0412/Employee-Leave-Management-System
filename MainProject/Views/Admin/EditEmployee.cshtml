@@ -1,0 +1,52 @@
+﻿@model Domain.EmployeeViewModel
+
+<h2>Edit Employee</h2>
+
+<form asp-action="EditEmployee" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" type="password" />
+    </div>
+
+    <div>
+        <label>Department</label>
+        <input asp-for="Department" />
+    </div>
+
+    <div>
+        <label>Designation</label>
+        <input asp-for="Designation" />
+    </div>
+
+    <div>
+        <label>Join Date</label>
+        <input asp-for="JoinDate" type="date" />
+    </div>
+
+    <br>
+
+    <button type="submit">Update</button>
+    <a asp-controller="Admin" asp-action="Dashboard" class="btn btn-secondary">
+        Back to Dashboard
+    </a>
+</form>
+<div style="color:red">
+    @Html.ValidationSummary()
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

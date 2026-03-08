@@ -1,0 +1,20 @@
+﻿@model Domain.AdminDashboardViewModel
+
+<h2>Admin Dashboard</h2>
+
+<div>
+    <h4>Total Employees: @Model.TotalEmployees</h4>
+    <h4>Pending Leaves: @Model.PendingLeaves</h4>
+    <h4>Approved Leaves: @Model.ApprovedLeaves</h4>
+</div>
+
+<hr />
+
+<a asp-action="Employees">Manage Employees</a> |
+<a asp-action="LeaveRequests">Leave Requests</a> |
+<a asp-action="Reports">Reports</a>
+
+<br>
+<br>
+
+<a asp-controller="Login" asp-action="Logout" class="btn btn-danger">Logout</a>

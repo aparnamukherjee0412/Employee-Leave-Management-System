@@ -1,0 +1,59 @@
+﻿@model Domain.EmployeeViewModel
+
+<h2>Add Employee</h2>
+
+<form asp-action="AddEmployee" method="post">
+
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Department</label>
+        <input asp-for="Department" />
+        <span asp-validation-for="Department" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Designation</label>
+        <input asp-for="Designation" />
+        <span asp-validation-for="Designation" style="color:red"></span>
+    </div>
+
+    <div>
+        <label>Join Date</label>
+        <input asp-for="JoinDate" type="date" />
+        <span asp-validation-for="JoinDate" style="color:red"></span>
+    </div>
+
+    <br>
+
+    <button type="submit">Save</button>
+
+    <a asp-controller="Admin" asp-action="Dashboard" class="btn btn-secondary">
+        Back to Dashboard
+    </a>
+
+</form>
+
+<div style="color:red">
+    @Html.ValidationSummary()
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
