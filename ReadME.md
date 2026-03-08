@@ -1,28 +1,17 @@
-\# Scaffold Statement-
-
-Scaffold-DbContext "server=DESKTOP-DMPU9K3; database=EmpLeaveManagementSystem; integrated security=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir D:\\Proj\\Infrastracture\\DbModels -Force
-
 \# Employee Leave Management System
-
-
 
 A web-based \*\*Employee Leave Management System\*\* built with \*\*ASP.NET Core MVC, Entity Framework Core, SQL Server, and SignalR\*\*.
 
 The system allows administrators to manage employees and leave requests, while employees can apply for leave and track their leave status. It also supports \*\*real-time notifications\*\* when leave requests are approved or rejected.
 
-
-
 ---
+\# Scaffold Statement-
 
-
+Scaffold-DbContext "server=DESKTOP-DMPU9K3; database=EmpLeaveManagementSystem; integrated security=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir D:\\Proj\\Infrastracture\\DbModels -Force
 
 \# Features
 
-
-
 \### Admin
-
-
 
 \* Admin Dashboard
 
@@ -483,6 +472,7 @@ Developed as a \*\*sample Employee Leave Management System project\*\* using ASP
 
 
 ---
+
 
 
 
